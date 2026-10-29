@@ -1,0 +1,6 @@
+{
+  "name": "CareerAlign - Resume & Job Matcher with Interview Coach",
+  "description": "Analyze your resume against any job description to discover missing skills, summarize strengths and improvements, practice role-specific interview questions, and optimize resume bullets without inventing qualifications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
