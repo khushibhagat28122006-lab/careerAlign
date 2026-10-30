@@ -36,6 +36,21 @@ Live Demo: https://careeralign-grtp.onrender.com
 - **Offline Preview Mode:** Uses a lightweight, keyword-based engine when AI generation is unavailable. Results may miss context and should not be interpreted as hiring probabilities.
 - **Configuration:** Set `GEMINI_API_KEY` in your local `.env.local` file for local development. For deployment, configure the variable in your hosting provider's environment settings.
 
+- ## 🤖 AI Analysis & Offline Mode
+
+CareerAlign supports AI-powered analysis through the Google Gemini API, with a local keyword-based fallback to keep the application useful when AI services are unavailable.
+
+### ✨ Gemini AI Analysis
+- CareerAlign uses Google Gemini to provide detailed, context-aware resume analysis, interview-answer evaluation, and resume bullet-point improvements.
+- Depending on the request, response time, and service availability, AI analysis may take **up to 1–2 minutes**.
+- Gemini analysis requires a valid API key and available API quota.
+
+### 📴 Offline Preview Mode
+- When the Gemini API quota is exhausted or the AI service is unavailable, CareerAlign automatically falls back to a **local keyword-based analysis engine**.
+- Offline Preview Mode provides useful preliminary feedback based on keywords and matching rules, helping users continue using the application without waiting for API access to become available.
+- Results may be less nuanced than Gemini-generated feedback and should be treated as estimates rather than equivalent AI analysis.
+- Gemini-powered analysis becomes available again when the API quota is restored and the service is accessible.
+
 ### 🔐 Privacy & Data Handling
 
 - Resume and job-description text is processed by the application's server.
