@@ -68,7 +68,10 @@
 
 - **Frontend**: React 19, TypeScript, Vite, Tailwind CSS v4, Lucide Icons, Canvas Confetti
 - **Backend**: Node.js / Express, `@google/genai` SDK
-- **AI Models**: Google Gemini (`gemini-2.5-flash`, `gemini-2.0-flash`, `gemini-1.5-flash`) with resilient fallback chain and local matching engine
+- **AI Models**: Google Gemini (`gemini-3.8-flash`,
+    `gemini-3.8-flash`,
+    `gemini-3.8-flash`,
+    `gemini-3.1-pro-preview`) with resilient fallback chain and local matching engine
 
 ---
 
