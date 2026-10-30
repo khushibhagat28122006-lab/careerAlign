@@ -1,31 +1,39 @@
 <div align="center">
   <h1>🎯 CareerAlign</h1>
-  <p><strong>Grounded Resume &amp; Job Matcher with Role-Specific Interview Coach</strong></p>
-  <p>Analyze resumes against any job posting to detect skill gaps, practice tailored interview scenarios with instant AI feedback, and optimize resume bullets without fabricating qualifications.</p>
+  <p><strong>Analyze job fit. Identify skill gaps. Prepare for interviews with AI-powered feedback.</strong></p>
+  <p>CareerAlign is an AI-powered career preparation tool that compares a resume against a job description, identifies relevant skill gaps, generates tailored interview practice, and improves resume bullet points while preserving factual accuracy.</p>
 </div>
 
 ---
+Live Demo: https://careeralign-grtp.onrender.com
 
 ## ✨ Features
 
 - **📊 Comprehensive Fit Assessment**: Generates an overall qualification match score (0–100%) and tier (High Match, Moderate Match, Reach Role) with an executive summary.
+  
 - **🔍 Missing Skills & Gap Analysis**: Pinpoints required technologies, frameworks, and methodologies missing from the candidate's resume, categorized with contextual quotes and actionable bridging advice.
+  
 - **✅ Validated Overlaps**: Direct proof points showing where the candidate's resume satisfies job requirements.
 - **🎙️ Interactive Interview Simulator**:
   - Voice dictation / text input with real-time response timer
   - Technical, Behavioral (STAR), Situational, and **Skill Gap Defense** scenarios
   - Instant AI answer scoring (1–10) with constructive strengths, improvement notes, and a polished model answer preserving your actual story.
+    
 - **✍️ Grounded Bullet Point Rewrites**:
   - Applies Google's *'Accomplished [X] as measured by [Y] by doing [Z]'* formula.
   - **Strict Anti-Hallucination Guardrail**: Inserts clean prompts like `[by X%]` or `[for Y users]` so your resume remains 100% honest.
   - Interactive Custom Rewriter Studio for any resume line.
+    
 - **🗓️ 7-Day Targeted Study Roadmap**: A step-by-step checklist to bridge priority skill gaps prior to interview day.
+  
 - **💾 History & Multi-Format Export**:
   - Automatically saves assessments to local browser history with instant restore.
   - Export full prep briefs as Markdown (`.md`), raw data (`.json`), or printable PDF documents (`window.print`).
+    
 - **⚡ Dual Mode (Gemini AI + Offline Keyword Engine)**:
   - Works without an API key using a lightweight keyword-based estimate; this mode can miss context and is not a hiring probability.
   - Configure `GEMINI_API_KEY` for Gemini-generated analysis and feedback.
+
 - **🔐 Privacy note**: submitted text is processed by this app's server. When a Gemini key is configured, request content is sent to Google's Gemini API. Analysis results are stored in the current browser's local history until you clear it; avoid entering information you do not want processed or saved.
 
 ---
@@ -68,9 +76,13 @@
 
 - **Frontend**: React 19, TypeScript, Vite, Tailwind CSS v4, Lucide Icons, Canvas Confetti
 - **Backend**: Node.js / Express, `@google/genai` SDK
-- **AI Models**: Google Gemini (`gemini-2.5-flash`, `gemini-2.0-flash`, `gemini-1.5-flash`) with resilient fallback chain and local matching engine
+- **AI Models**: Google Gemini (`gemini-3.8-flash`,
+    `gemini-3.8-flash`,
+    `gemini-3.8-flash`,
+    `gemini-3.1-pro-preview`) with resilient fallback chain and local matching engine
 
 ---
+
 
 ## 📁 Project Structure
 
