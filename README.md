@@ -30,12 +30,18 @@ Live Demo: https://careeralign-grtp.onrender.com
   - Automatically saves assessments to local browser history with instant restore.
   - Export full prep briefs as Markdown (`.md`), raw data (`.json`), or printable PDF documents (`window.print`).
     
-- **⚡ Dual Mode (Gemini AI + Offline Keyword Engine)**:
-  - Works without an API key using a lightweight keyword-based estimate; this mode can miss context and is not a hiring probability.
-  - Configure `GEMINI_API_KEY` for Gemini-generated analysis and feedback.
+- ### ⚡ Dual Mode: Gemini AI & Offline Analysis
 
-- **🔐 Privacy note**: submitted text is processed by this app's server. When a Gemini key is configured, request content is sent to Google's Gemini API. Analysis results are stored in the current browser's local history until you clear it; avoid entering information you do not want processed or saved.
+- **Gemini AI Mode:** Uses Google's Gemini API to generate contextual resume-job match assessments, skill-gap insights, and interview feedback.
+- **Offline Preview Mode:** Uses a lightweight, keyword-based engine when AI generation is unavailable. Results may miss context and should not be interpreted as hiring probabilities.
+- **Configuration:** Set `GEMINI_API_KEY` in your local `.env.local` file for local development. For deployment, configure the variable in your hosting provider's environment settings.
 
+### 🔐 Privacy & Data Handling
+
+- Resume and job-description text is processed by the application's server.
+- When Gemini AI is used, relevant request content is sent to Google's Gemini API for processing.
+- Assessment history is stored in the current browser's local storage and remains there until cleared.
+- Avoid submitting sensitive personal information. Review AI-generated results before using them professionally.
 ---
 
 ## 🚀 Quick Start
@@ -74,13 +80,9 @@ Live Demo: https://careeralign-grtp.onrender.com
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React 19, TypeScript, Vite, Tailwind CSS v4, Lucide Icons, Canvas Confetti
-- **Backend**: Node.js / Express, `@google/genai` SDK
-- **AI Models**: Google Gemini (`gemini-3.8-flash`,
-    `gemini-3.8-flash`,
-    `gemini-3.8-flash`,
-    `gemini-3.1-pro-preview`) with resilient fallback chain and local matching engine
-
+- **Frontend:** React 19, TypeScript, Vite, Tailwind CSS v4, Lucide Icons, and Canvas Confetti
+- **Backend:** Node.js, Express, and the `@google/genai` SDK for Gemini AI integration
+- **AI Models:** Google Gemini (`gemini-3.8-flash` and `gemini-3.1-pro-preview`), with a fallback chain and a local keyword-based matching engine.
 ---
 
 
@@ -90,23 +92,26 @@ Live Demo: https://careeralign-grtp.onrender.com
 careeralign/
 ├── src/
 │   ├── components/
-│   │   ├── Header.tsx                          # App header with presets, history, and exports
-│   │   ├── HistoryModal.tsx                    # Modal to browse and restore past analyses
-│   │   ├── InputSection.tsx                    # Dual-panel input with file upload & clipboard paste
-│   │   ├── ScoreOverviewCard.tsx               # Score dial and interactive KPI cards
-│   │   ├── MissingSkillsSection.tsx            # Missing skills filter, search, and bridging tips
-│   │   ├── MatchedSkillsSection.tsx            # Validated candidate skills with resume evidence
-│   │   ├── StrengthsAndImprovementsSection.tsx # Key strengths and growth action items
-│   │   ├── InterviewCoachSection.tsx           # Voice/text mock simulator & answer evaluator
-│   │   ├── BulletOptimizerSection.tsx          # Grounded bullet rewrites & custom rewriter studio
-│   │   └── QuickStudyPlanSection.tsx           # 7-day interactive checklist roadmap
+│   │   ├── Header.tsx
+│   │   ├── HistoryModal.tsx
+│   │   ├── InputSection.tsx
+│   │   ├── ScoreOverviewCard.tsx
+│   │   ├── MissingSkillsSection.tsx
+│   │   ├── MatchedSkillsSection.tsx
+│   │   ├── StrengthsAndImprovementsSection.tsx
+│   │   ├── InterviewCoachSection.tsx
+│   │   ├── BulletOptimizerSection.tsx
+│   │   └── QuickStudyPlanSection.tsx
 │   ├── data/
-│   │   └── samplePresets.ts                    # Realistic presets (Student Intern, Full-Stack, MLE)
-│   ├── types.ts                                # TypeScript domain interfaces
-│   ├── App.tsx                                 # Master app state, tabs, and export orchestrator
-│   └── main.tsx                                # React root mount
-├── server.ts                                   # Express server, Gemini AI integration & fallback engine
-├── vite.config.ts                              # Vite + Tailwind v4 bundler config
-├── package.json                                # Scripts and dependencies
-└── .env.local                                  # Local environment configuration
+│   │   └── samplePresets.ts
+│   ├── types.ts
+│   ├── App.tsx
+│   └── main.tsx
+├── server.ts
+├── vite.config.ts
+├── package.json
+├── pnpm-lock.yaml
+├── bun.lock
+├── .gitignore
+└── README.md
 ```
